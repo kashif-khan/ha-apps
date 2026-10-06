@@ -1,0 +1,33 @@
+# https://developers.home-assistant.io/docs/apps/configuration#app-configuration
+name: Homebox
+version: "0.27.0-rc.1-kk.1"
+slug: homebox
+description: Home inventory with scheduled, versioned and remote backups
+url: "https://github.com/kashif-khan/ha-apps/tree/main/homebox"
+arch:
+  - aarch64
+  - amd64
+init: false
+startup: services
+boot: auto
+backup: cold
+ports:
+  7745/tcp: 7745
+ports_description:
+  7745/tcp: Web interface and API
+options:
+  log_level: info
+  allow_registration: true
+  max_upload_size: 10
+  trust_proxy: false
+schema:
+  log_level: list(trace|debug|info|warn|error|fatal|panic)
+  allow_registration: bool
+  max_upload_size: int(1,)
+  trust_proxy: bool
+  smtp_host: str?
+  smtp_port: port?
+  smtp_from: email?
+  smtp_user: str?
+  smtp_password: password?
+image: "ghcr.io/kashif-khan/app-homebox"

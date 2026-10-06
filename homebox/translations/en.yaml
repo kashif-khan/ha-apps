@@ -1,0 +1,30 @@
+configuration:
+  log_level:
+    name: Log level
+    description: How much Homebox writes to the app log.
+  allow_registration:
+    name: Allow registration
+    description: Let people create their own accounts. Turn this off once your users exist.
+  max_upload_size:
+    name: Maximum upload size
+    description: Largest file that can be attached to an item, in MB.
+  trust_proxy:
+    name: Trust proxy
+    description: Turn on when Homebox sits behind a reverse proxy, so that https is detected correctly.
+  smtp_host:
+    name: SMTP host
+    description: Mail server used for notification emails. Leave empty to disable email.
+  smtp_port:
+    name: SMTP port
+    description: Port of the mail server.
+  smtp_from:
+    name: SMTP from
+    description: Sender address of outgoing emails.
+  smtp_user:
+    name: SMTP user
+    description: Username for the mail server.
+  smtp_password:
+    name: SMTP password
+    description: Password for the mail server.
+network:
+  7745/tcp: Web interface and API

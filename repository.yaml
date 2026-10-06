@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/apps/repository#repository-configuration
+name: Kashif Khan's Home Assistant apps
+url: 'https://github.com/kashif-khan/ha-apps'
+maintainer: Kashif Khan <uplink2010@gmail.com>
