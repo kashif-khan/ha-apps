@@ -1,7 +1,7 @@
 # https://developers.home-assistant.io/docs/apps/configuration#app-dockerfile
 # The fork image is built from the kashif-khan/homebox custom branch by its
 # fork-release workflow whenever a v*-kk.* tag is pushed.
-ARG BUILD_FROM=ghcr.io/kashif-khan/homebox:v0.27.0-rc.1-kk.1
+ARG BUILD_FROM=ghcr.io/kashif-khan/homebox:v0.27.0-rc.1-kk.2
 FROM ${BUILD_FROM}
 
 RUN apk add --no-cache jq

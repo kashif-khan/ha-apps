@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/apps/configuration#app-configuration
 name: Homebox
-version: "0.27.0-rc.1-kk.1"
+version: "0.27.0-rc.1-kk.2"
 slug: homebox
 description: Home inventory with scheduled, versioned and remote backups
 url: "https://github.com/kashif-khan/ha-apps/tree/main/homebox"
@@ -8,8 +8,6 @@ arch:
   - aarch64
   - amd64
 init: false
-startup: services
-boot: auto
 backup: cold
 ports:
   7745/tcp: 7745
