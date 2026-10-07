@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/apps/configuration#app-configuration
 name: Homebox
-version: "0.27.0-rc.1-kk.2"
+version: "0.27.0-rc.1-kk.3"
 slug: homebox
 description: Home inventory with scheduled, versioned and remote backups
 url: "https://github.com/kashif-khan/ha-apps/tree/main/homebox"
