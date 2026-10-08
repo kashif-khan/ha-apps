@@ -1,41 +1,17 @@
+---
 name: Lint
 
+# yamllint disable-line rule:truthy
 on:
   push:
     branches:
       - main
   pull_request:
-    branches:
-      - main
-  schedule:
-    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  find:
-    name: Find apps
-    runs-on: ubuntu-latest
-    outputs:
-      addons: ${{ steps.addons.outputs.addons_list }}
-    steps:
-      - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v7.0.1
-
-      - name: 🔍 Find app directories
-        id: addons
-        uses: home-assistant/actions/helpers/find-addons@master
-
-  lint:
-    name: Lint app ${{ matrix.path }}
-    runs-on: ubuntu-latest
-    needs: find
-    strategy:
-      matrix:
-        path: ${{ fromJson(needs.find.outputs.addons) }}
-    steps:
-      - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v7.0.1
-
-      - name: 🚀 Run Home Assistant App Lint
-        uses: frenck/action-addon-linter@v2.21
-        with:
-          path: "./${{ matrix.path }}"
+  workflows:
+    uses: hassio-addons/workflows/.github/workflows/repository-lint.yaml@e0c532a7b0fb264b3ff0c718c2c0308a0c8c1390 # v4.0.0

@@ -1,0 +1,7 @@
+---
+channel: stable
+apps:
+  homebox:
+    repository: kashif-khan/app-homebox
+    target: homebox
+    image: ghcr.io/kashif-khan/homebox

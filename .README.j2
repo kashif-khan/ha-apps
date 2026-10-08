@@ -1,0 +1,49 @@
+# Kashif Khan's Home Assistant apps
+
+Third-party Home Assistant app store. Each app lives in its own repository,
+which is a fork of the community packaging with changes rebased on top. This
+repository is generated from them by the repository updater; do not edit the
+app folders by hand.
+
+| Layer | Repository |
+| ----- | ---------- |
+| App store | [kashif-khan/ha-apps]({{ repo }}) |
+| App packaging | kashif-khan/app-\<name\>, forked from hassio-addons/app-\<name\> |
+| Application | kashif-khan/\<name\>, forked from the original project |
+
+## Installation
+
+[![Open your Home Assistant instance and show the app store with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_store.svg)](https://my.home-assistant.io/redirect/supervisor_store/?repository_url={{ repo | urlencode }})
+
+Or add this URL in the Home Assistant app store, under repositories:
+
+```txt
+{{ repo }}
+```
+
+## Apps provided by this repository
+
+{% for addon in addons %}
+### [{{ addon.name }}][addon-{{ addon.target }}]
+
+![Latest Version][{{ addon.target }}-version-shield]
+
+{{ addon.description }}
+
+[{{ addon.name }} app documentation][addon-doc-{{ addon.target }}]
+
+{% endfor %}
+## Support
+
+Open an issue on the repository that matches the problem:
+
+{% for addon in addons %}
+- [{{ addon.name }} packaging]({{ addon.repo }}/issues)
+{% endfor %}
+- [This app store]({{ issues }})
+
+{% for addon in addons %}
+[addon-{{ addon.target }}]: {{ addon.repo }}/tree/{{ addon.version }}
+[addon-doc-{{ addon.target }}]: {{ addon.repo }}/blob/{{ addon.version }}/README.md
+[{{ addon.target }}-version-shield]: https://img.shields.io/badge/version-{{ addon.version }}-blue.svg
+{% endfor %}
