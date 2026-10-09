@@ -1,5 +1,5 @@
 ---
-channel: stable
+channel: beta
 apps:
   homebox:
     repository: kashif-khan/app-homebox
