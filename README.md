@@ -23,9 +23,21 @@ https://github.com/kashif-khan/ha-apps
 
 ## Apps provided by this repository
 
+### [Homebox][addon-homebox]
+
+![Latest Version][homebox-version-shield]
+
+Inventory and organization system for the things in your home
+
+[Homebox app documentation][addon-doc-homebox]
+
 ## Support
 
 Open an issue on the repository that matches the problem:
 
+- [Homebox packaging](https://github.com/kashif-khan/app-homebox/issues)
 - [This app store](https://api.github.com/repos/kashif-khan/ha-apps/issues{/number})
 
+[addon-homebox]: https://github.com/kashif-khan/app-homebox/tree/v0.27.0-rc.1-kk.5
+[addon-doc-homebox]: https://github.com/kashif-khan/app-homebox/blob/v0.27.0-rc.1-kk.5/README.md
+[homebox-version-shield]: https://img.shields.io/badge/version-v0.27.0-rc.1-kk.5-blue.svg
