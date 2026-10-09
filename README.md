@@ -1,30 +1,31 @@
 # Kashif Khan's Home Assistant apps
 
-Third-party Home Assistant app repository, based on
-[home-assistant/apps-example](https://github.com/home-assistant/apps-example).
+Third-party Home Assistant app store. Each app lives in its own repository,
+which is a fork of the community packaging with changes rebased on top. This
+repository is generated from them by the repository updater; do not edit the
+app folders by hand.
 
-Apps documentation: <https://developers.home-assistant.io/docs/apps>
+| Layer | Repository |
+| ----- | ---------- |
+| App store | [kashif-khan/ha-apps](https://github.com/kashif-khan/ha-apps) |
+| App packaging | kashif-khan/app-\<name\>, forked from hassio-addons/app-\<name\> |
+| Application | kashif-khan/\<name\>, forked from the original project |
 
-[![Open your Home Assistant instance and show the app store with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_store.svg)](https://my.home-assistant.io/redirect/supervisor_store/?repository_url=https%3A%2F%2Fgithub.com%2Fkashif-khan%2Fha-apps)
+## Installation
 
-## Apps
+[![Open your Home Assistant instance and show the app store with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_store.svg)](https://my.home-assistant.io/redirect/supervisor_store/?repository_url=https%3A//github.com/kashif-khan/ha-apps)
 
-### [Homebox](./homebox)
+Or add this URL in the Home Assistant app store, under repositories:
 
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
+```txt
+https://github.com/kashif-khan/ha-apps
+```
 
-_Home inventory built from the [kashif-khan/homebox](https://github.com/kashif-khan/homebox)
-fork of [Homebox](https://github.com/sysadminsmedia/homebox), with scheduled,
-versioned and remote backups._
+## Apps provided by this repository
 
-## Adding an app
+## Support
 
-1. Create a directory named after the app's `slug`, with `config.yaml`,
-   `Dockerfile`, `README.md`, `DOCS.md` and `CHANGELOG.md`.
-2. Set `image` to `ghcr.io/kashif-khan/app-<slug>`.
-3. Bump `version` and update the changelog on every change; pushing to `main`
-   builds and publishes the image.
+Open an issue on the repository that matches the problem:
 
-[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+- [This app store](https://api.github.com/repos/kashif-khan/ha-apps/issues{/number})
+
