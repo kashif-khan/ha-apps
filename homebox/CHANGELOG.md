@@ -1,1 +1,1 @@
-Homebox fork v0.27.0-rc.1-kk.6.
+Homebox fork v0.27.0-rc.1-kk.7.
