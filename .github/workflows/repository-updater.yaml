@@ -10,8 +10,22 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: queue
+
 jobs:
-  workflows:
-    uses: hassio-addons/workflows/.github/workflows/repository-updater.yaml@e0c532a7b0fb264b3ff0c718c2c0308a0c8c1390 # v4.0.0
-    secrets:
-      UPDATER_TOKEN: ${{ secrets.UPDATER_TOKEN }}
+  publish:
+    name: Publish app update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Repository Updater
+        uses: hassio-addons/repository-updater@88408cfe4468560e649cb9c227431a696c9298ea # v2.0.1
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        with:
+          app: ${{ github.event.client_payload.app }}
+          repository: ${{ github.repository }}
+          token: ${{ secrets.UPDATER_TOKEN }}
