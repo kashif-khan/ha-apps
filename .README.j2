@@ -40,10 +40,10 @@ Open an issue on the repository that matches the problem:
 {% for addon in addons %}
 - [{{ addon.name }} packaging]({{ addon.repo }}/issues)
 {% endfor %}
-- [This app store]({{ issues }})
+- [This app store]({{ repo }}/issues)
 
 {% for addon in addons %}
 [addon-{{ addon.target }}]: {{ addon.repo }}/tree/{{ addon.version }}
 [addon-doc-{{ addon.target }}]: {{ addon.repo }}/blob/{{ addon.version }}/README.md
-[{{ addon.target }}-version-shield]: https://img.shields.io/badge/version-{{ addon.version }}-blue.svg
+[{{ addon.target }}-version-shield]: https://img.shields.io/badge/version-{{ addon.version | replace('-', '--') }}-blue.svg
 {% endfor %}
