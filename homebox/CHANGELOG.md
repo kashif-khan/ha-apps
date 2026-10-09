@@ -1,1 +1,1 @@
-Homebox fork v0.27.0-rc.1-kk.5 (scheduled, versioned and remote backups) with OIDC options.
+Homebox fork v0.27.0-rc.1-kk.6.

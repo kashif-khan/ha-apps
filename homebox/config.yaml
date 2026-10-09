@@ -1,5 +1,5 @@
 name: Homebox
-version: 0.27.0-rc.1-kk.5
+version: 0.27.0-rc.1-kk.6
 slug: homebox
 description: Inventory and organization system for the things in your home
 url: https://github.com/kashif-khan/app-homebox
@@ -51,6 +51,14 @@ schema:
   oidc_name_claim: str?
   oidc_auto_redirect: bool?
   oidc_verify_email: bool?
+  backup_google_client_id: str?
+  backup_google_client_secret: password?
+  backup_microsoft_client_id: str?
+  backup_microsoft_client_secret: password?
+  backup_microsoft_tenant: str?
+  backup_dropbox_client_id: str?
+  backup_dropbox_client_secret: password?
+  backup_allow_custom_endpoints: bool?
   ssl: bool
   certfile: str
   keyfile: str
