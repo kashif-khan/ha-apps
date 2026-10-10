@@ -1,5 +1,5 @@
 name: Homebox
-version: 0.27.0-rc.1-kk.7
+version: 0.27.0-rc.1-kk.8
 slug: homebox
 description: Inventory and organization system for the things in your home
 url: https://github.com/kashif-khan/app-homebox
@@ -25,6 +25,9 @@ options:
   max_upload_size: 10
   allow_local_login: true
   oidc_enabled: false
+  mcp_enabled: false
+  mcp_allow_writes: true
+  mcp_allow_delete: false
   ssl: false
   certfile: fullchain.pem
   keyfile: privkey.pem
@@ -59,6 +62,9 @@ schema:
   backup_dropbox_client_id: str?
   backup_dropbox_client_secret: password?
   backup_allow_custom_endpoints: bool?
+  mcp_enabled: bool
+  mcp_allow_writes: bool
+  mcp_allow_delete: bool
   ssl: bool
   certfile: str
   keyfile: str
