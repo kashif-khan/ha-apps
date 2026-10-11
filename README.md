@@ -38,6 +38,6 @@ Open an issue on the repository that matches the problem:
 - [Homebox packaging](https://github.com/kashif-khan/app-homebox/issues)
 - [This app store](https://github.com/kashif-khan/ha-apps/issues)
 
-[addon-homebox]: https://github.com/kashif-khan/app-homebox/tree/v0.27.0-rc.1-kk.9
-[addon-doc-homebox]: https://github.com/kashif-khan/app-homebox/blob/v0.27.0-rc.1-kk.9/README.md
-[homebox-version-shield]: https://img.shields.io/badge/version-v0.27.0--rc.1--kk.9-blue.svg
+[addon-homebox]: https://github.com/kashif-khan/app-homebox/tree/0.27.0.11
+[addon-doc-homebox]: https://github.com/kashif-khan/app-homebox/blob/0.27.0.11/README.md
+[homebox-version-shield]: https://img.shields.io/badge/version-0.27.0.11-blue.svg
