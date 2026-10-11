@@ -1,5 +1,5 @@
 name: Homebox
-version: 0.27.0-rc.1-kk.8
+version: 0.27.0-rc.1-kk.9
 slug: homebox
 description: Inventory and organization system for the things in your home
 url: https://github.com/kashif-khan/app-homebox
@@ -28,6 +28,7 @@ options:
   mcp_enabled: false
   mcp_allow_writes: true
   mcp_allow_delete: false
+  webhooks_enabled: false
   ssl: false
   certfile: fullchain.pem
   keyfile: privkey.pem
@@ -65,6 +66,7 @@ schema:
   mcp_enabled: bool
   mcp_allow_writes: bool
   mcp_allow_delete: bool
+  webhooks_enabled: bool
   ssl: bool
   certfile: str
   keyfile: str
