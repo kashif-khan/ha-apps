@@ -5,3 +5,7 @@ apps:
     repository: kashif-khan/app-homebox
     target: homebox
     image: ghcr.io/kashif-khan/homebox
+  scrapling-barcode:
+    repository: kashif-khan/scrapling-barcode
+    target: scrapling-barcode
+    image: ghcr.io/kashif-khan/scrapling-barcode
